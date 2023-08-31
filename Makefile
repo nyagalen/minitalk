@@ -6,7 +6,7 @@
 #    By: svydrina <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/19 19:44:44 by svydrina          #+#    #+#              #
-#    Updated: 2023/07/21 18:54:38 by svydrina         ###   ########.fr        #
+#    Updated: 2023/08/28 20:53:34 by svydrina         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,10 +20,10 @@ all: server client libft
 
 bonus: server client libft
 
-server: server.o libft
+server: server.o | libft
 	cc -o $@ $< -Llibft -lft
 
-client: client.o libft
+client: client.o | libft
 	cc -o $@ $< -Llibft -lft
 
 %.o: %.c
